@@ -51,7 +51,7 @@ public class Tetris extends JFrame {
 		/*
 		 * Set the basic properties of the window.
 		 */
-		super("Tetris");
+		super("Tetris Time");
 		setLayout(new BorderLayout());
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setResizable(false);

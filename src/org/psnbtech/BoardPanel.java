@@ -295,7 +295,7 @@ public class BoardPanel extends JPanel {
 			 * we can handle them together and just use a ternary operator to change
 			 * the messages that are displayed.
 			 */
-			String msg = tetris.isNewGame() ? "TETRIS" : "GAME OVER";
+			String msg = tetris.isNewGame() ? "Are You Ready?" : "GAME OVER";
 			g.drawString(msg, CENTER_X - g.getFontMetrics().stringWidth(msg) / 2, 150);
 			g.setFont(SMALL_FONT);
 			msg = "Press Enter to Play" + (tetris.isNewGame() ? "" : " Again");
