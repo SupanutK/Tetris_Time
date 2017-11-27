@@ -12,10 +12,10 @@ public class Menu {
 
 	public static void render(Graphics g) {
 		Graphics2D g2d = (Graphics2D) g;
-		Font fnt0 = new Font("arial", Font.BOLD, 50);
+		Font fnt0 = new Font("arial", Font.BOLD, 35);
 		g.setFont(fnt0);
 		g.setColor(Color.GREEN);
-		g.drawString("    Tetris", Tetris.WIDTH / 2, 100);
+		g.drawString("    Tetris Time", Tetris.WIDTH / 2, 100);
 
 		Font fnt1 = new Font("arial",Font.BOLD,30);
 		g.setFont(fnt1);
