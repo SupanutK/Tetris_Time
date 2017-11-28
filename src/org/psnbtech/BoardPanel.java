@@ -118,7 +118,7 @@ public class BoardPanel extends JPanel {
 		this.tiles = new TileType[ROW_COUNT][COL_COUNT];
 
 		setPreferredSize(new Dimension(PANEL_WIDTH, PANEL_HEIGHT));
-		setBackground(Color.BLACK);
+		setBackground(Color.GRAY);
 	}
 
 	/**
@@ -414,7 +414,7 @@ public class BoardPanel extends JPanel {
 			/*
 			 * Draw the outline.
 			 */
-			g.setColor(Color.WHITE);
+			g.setColor(Color.DARK_GRAY);
 			g.drawRect(0, 0, TILE_SIZE * COL_COUNT, TILE_SIZE * VISIBLE_ROW_COUNT);
 		} else if (State == STATE.MENU) {
 			Menu.render(g);

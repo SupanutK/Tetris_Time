@@ -104,7 +104,7 @@ public class SidePanel extends JPanel {
 		this.tetris = tetris;
 		
 		setPreferredSize(new Dimension(200, BoardPanel.PANEL_HEIGHT));
-		setBackground(Color.BLACK);
+		setBackground(Color.GRAY);
 	}
 	
 	@Override
@@ -112,7 +112,7 @@ public class SidePanel extends JPanel {
 		super.paintComponent(g);
 		
 		//Set the color for drawing.
-		g.setColor(DRAW_COLOR);
+		g.setColor(Color.WHITE);
 		
 		/*
 		 * This variable stores the current y coordinate of the string.
@@ -142,7 +142,7 @@ public class SidePanel extends JPanel {
 		g.drawString("E - Rotate Clockwise", LARGE_INSET, offset += TEXT_STRIDE);
 		g.drawString("S - Drop", LARGE_INSET, offset += TEXT_STRIDE);
 		g.drawString("P - Pause Game", LARGE_INSET, offset += TEXT_STRIDE);
-		
+		g.drawString("O - Restart Game",LARGE_INSET,offset+= TEXT_STRIDE);
 		/*
 		 * Draw the next piece preview box.
 		 */

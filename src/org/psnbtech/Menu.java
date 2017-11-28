@@ -14,10 +14,10 @@ public class Menu {
 		Graphics2D g2d = (Graphics2D) g;
 		Font fnt0 = new Font("arial", Font.BOLD, 35);
 		g.setFont(fnt0);
-		g.setColor(Color.GREEN);
+		g.setColor(Color.WHITE);
 		g.drawString("    Tetris Time", Tetris.WIDTH / 2, 100);
 
-		Font fnt1 = new Font("arial",Font.BOLD,30);
+		Font fnt1 = new Font("Tahoma",Font.BOLD,30);
 		g.setFont(fnt1);
 		g.drawString("Start", playButton.x+15 , playButton .y+35);
 		g.drawString("Exit", quitButton.x+15 , quitButton .y+35);

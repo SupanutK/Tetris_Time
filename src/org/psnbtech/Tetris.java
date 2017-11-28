@@ -178,7 +178,10 @@ public class Tetris extends JFrame {
 							resetGame();
 						}
 						break;
-
+					case KeyEvent.VK_O:
+						if(!isPaused) {
+							resetGame();
+						}
 					}
 
 				}
