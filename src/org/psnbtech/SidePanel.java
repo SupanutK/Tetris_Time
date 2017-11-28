@@ -85,12 +85,6 @@ public class SidePanel extends JPanel {
 	 * The large font.
 	 */
 	private static final Font LARGE_FONT = new Font("Tahoma", Font.BOLD, 13);
-	
-	/**
-	 * The color to draw the text and preview box in.
-	 */
-	private static final Color DRAW_COLOR = new Color(128, 192, 128);
-	
 	/**
 	 * The Tetris instance.
 	 */

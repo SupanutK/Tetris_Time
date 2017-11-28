@@ -169,7 +169,7 @@ public class Tetris extends JFrame {
 						break;
 
 					/*
-					 * Start Game - When pressed, check to see that we're in
+					 * Start Game - When pressed
 					 * either a game over or new game state. If so, reset the
 					 * game.
 					 */
@@ -178,6 +178,10 @@ public class Tetris extends JFrame {
 							resetGame();
 						}
 						break;
+					/*
+					 * Restart Game -When pressed
+					 * game will restart.
+					 */
 					case KeyEvent.VK_O:
 						if(!isPaused) {
 							resetGame();

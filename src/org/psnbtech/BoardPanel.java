@@ -366,11 +366,7 @@ public class BoardPanel extends JPanel {
 				}
 
 				/*
-				 * Draw the ghost (semi-transparent piece that shows where the
-				 * current piece will land). I couldn't think of a better way to
-				 * implement this so it'll have to do for now. We simply take
-				 * the current position and move down until we hit a row that
-				 * would cause a collision.
+				 * Draw the ghost 
 				 */
 				Color base = type.getBaseColor();
 				base = new Color(base.getRed(), base.getGreen(), base.getBlue(), 20);
