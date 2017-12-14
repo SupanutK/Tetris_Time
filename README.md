@@ -9,7 +9,7 @@ Tile-matching puzzle game.
 - "S" Drop.
 - "P" Pause game.
 - "O" Restart game.
-#Gameplay
+Gameplay
 - MenuScreen ▼  ![Menu screen](Capture.PNG)
 - Tetris Gameplay ▼  ![Gameplay Tetris](Capture 1.PNG)
 ## Contributors
