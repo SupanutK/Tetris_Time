@@ -9,6 +9,8 @@ Tile-matching puzzle game.
 - "S" Drop.
 - "P" Pause game.
 - "O" Restart game.
+#Gameplay
+![Menu screen](caption.png)
 ## Contributors
 - [**Supanut Petchnapaphan**](https://github.com/SupanutK) 6010545927
 - [**Pittayoot Ruangrungratanakul**](https://github.com/khaopanbit) 6010545862
