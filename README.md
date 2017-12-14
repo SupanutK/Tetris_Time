@@ -11,7 +11,7 @@ Tile-matching puzzle game.
 - "O" Restart game.
 #Gameplay
 - MenuScreen ▼  ![Menu screen](Capture.PNG)
-- Tetris Gameplay ▼  ![Gameplay Tetris](Capture1.PNG)
+- Tetris Gameplay ▼  ![Gameplay Tetris](Capture 1.PNG)
 ## Contributors
 - [**Supanut Petchnapaphan**](https://github.com/SupanutK) 6010545927
 - [**Pittayoot Ruangrungratanakul**](https://github.com/khaopanbit) 6010545862
