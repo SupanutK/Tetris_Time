@@ -15,14 +15,14 @@ public class BoardPanel extends JPanel {
 	private static final long serialVersionUID = 5055679736784226108L;
 
 	/**
-	 * Minimum color component values for tiles. This is required if we want to
-	 * show both light and dark shading on our tiles.
+	 * Minimum color component values for tiles. This is required if we want to show
+	 * both light and dark shading on our tiles.
 	 */
 	public static final int COLOR_MIN = 35;
 
 	/**
-	 * Maximum color component values for tiles. This is required if we want to
-	 * show both light and dark shading on our tiles.
+	 * Maximum color component values for tiles. This is required if we want to show
+	 * both light and dark shading on our tiles.
 	 */
 	public static final int COLOR_MAX = 255 - COLOR_MIN;
 
@@ -126,8 +126,7 @@ public class BoardPanel extends JPanel {
 	 */
 	public void clear() {
 		/*
-		 * Loop through every tile index and set it's value to null to clear the
-		 * board.
+		 * Loop through every tile index and set it's value to null to clear the board.
 		 */
 		for (int i = 0; i < ROW_COUNT; i++) {
 			for (int j = 0; j < COL_COUNT; j++) {
@@ -162,11 +161,11 @@ public class BoardPanel extends JPanel {
 		}
 
 		/*
-		 * Loop through every tile in the piece and see if it conflicts with an
-		 * existing tile.
+		 * Loop through every tile in the piece and see if it conflicts with an existing
+		 * tile.
 		 * 
-		 * Note: It's fine to do this even though it allows for wrapping because
-		 * we've already checked to make sure the piece is in a valid location.
+		 * Note: It's fine to do this even though it allows for wrapping because we've
+		 * already checked to make sure the piece is in a valid location.
 		 */
 		for (int col = 0; col < type.getDimension(); col++) {
 			for (int row = 0; row < type.getDimension(); row++) {
@@ -179,8 +178,8 @@ public class BoardPanel extends JPanel {
 	}
 
 	/**
-	 * Adds a piece to the game board. Note: Doesn't check for existing pieces,
-	 * and will overwrite them if they exist.
+	 * Adds a piece to the game board. Note: Doesn't check for existing pieces, and
+	 * will overwrite them if they exist.
 	 * 
 	 * @param type
 	 *            The type of piece to place.
@@ -193,8 +192,8 @@ public class BoardPanel extends JPanel {
 	 */
 	public void addPiece(TileType type, int x, int y, int rotation) {
 		/*
-		 * Loop through every tile within the piece and add it to the board only
-		 * if the boolean that represents that tile is set to true.
+		 * Loop through every tile within the piece and add it to the board only if the
+		 * boolean that represents that tile is set to true.
 		 */
 		for (int col = 0; col < type.getDimension(); col++) {
 			for (int row = 0; row < type.getDimension(); row++) {
@@ -206,8 +205,8 @@ public class BoardPanel extends JPanel {
 	}
 
 	/**
-	 * Checks the board to see if any lines have been cleared, and removes them
-	 * from the game.
+	 * Checks the board to see if any lines have been cleared, and removes them from
+	 * the game.
 	 * 
 	 * @return The number of lines that were cleared.
 	 */
@@ -215,12 +214,12 @@ public class BoardPanel extends JPanel {
 		int completedLines = 0;
 
 		/*
-		 * Here we loop through every line and check it to see if it's been
-		 * cleared or not. If it has, we increment the number of completed lines
-		 * and check the next row.
+		 * Here we loop through every line and check it to see if it's been cleared or
+		 * not. If it has, we increment the number of completed lines and check the next
+		 * row.
 		 * 
-		 * The checkLine function handles clearing the line and shifting the
-		 * rest of the board down for us.
+		 * The checkLine function handles clearing the line and shifting the rest of the
+		 * board down for us.
 		 */
 		for (int row = 0; row < ROW_COUNT; row++) {
 			if (checkLine(row)) {
@@ -239,8 +238,8 @@ public class BoardPanel extends JPanel {
 	 */
 	private boolean checkLine(int line) {
 		/*
-		 * Iterate through every column in this row. If any of them are empty,
-		 * then the row is not full.
+		 * Iterate through every column in this row. If any of them are empty, then the
+		 * row is not full.
 		 */
 		for (int col = 0; col < COL_COUNT; col++) {
 			if (!isOccupied(col, line)) {
@@ -249,8 +248,8 @@ public class BoardPanel extends JPanel {
 		}
 
 		/*
-		 * Since the line is filled, we need to 'remove' it from the game. To do
-		 * this, we simply shift every row above it down by one.
+		 * Since the line is filled, we need to 'remove' it from the game. To do this,
+		 * we simply shift every row above it down by one.
 		 */
 		for (int row = line - 1; row >= 0; row--) {
 			for (int col = 0; col < COL_COUNT; col++) {
@@ -321,9 +320,9 @@ public class BoardPanel extends JPanel {
 				g.setColor(Color.WHITE);
 
 				/*
-				 * Because both the game over and new game screens are nearly
-				 * identical, we can handle them together and just use a ternary
-				 * operator to change the messages that are displayed.
+				 * Because both the game over and new game screens are nearly identical, we can
+				 * handle them together and just use a ternary operator to change the messages
+				 * that are displayed.
 				 */
 				String msg = tetris.isNewGame() ? "Are You Ready?" : "GAME OVER";
 				g.drawString(msg, CENTER_X - g.getFontMetrics().stringWidth(msg) / 2, 150);
@@ -345,10 +344,10 @@ public class BoardPanel extends JPanel {
 				}
 
 				/*
-				 * Draw the current piece. This cannot be drawn like the rest of
-				 * the pieces because it's still not part of the game board. If
-				 * it were part of the board, it would need to be removed every
-				 * frame which would just be slow and confusing.
+				 * Draw the current piece. This cannot be drawn like the rest of the pieces
+				 * because it's still not part of the game board. If it were part of the board,
+				 * it would need to be removed every frame which would just be slow and
+				 * confusing.
 				 */
 				TileType type = tetris.getPieceType();
 				int pieceCol = tetris.getPieceCol();
@@ -366,7 +365,7 @@ public class BoardPanel extends JPanel {
 				}
 
 				/*
-				 * Draw the ghost 
+				 * Draw the ghost
 				 */
 				Color base = type.getBaseColor();
 				base = new Color(base.getRed(), base.getGreen(), base.getBlue(), 30);
@@ -394,9 +393,8 @@ public class BoardPanel extends JPanel {
 				}
 
 				/*
-				 * Draw the background grid above the pieces (serves as a useful
-				 * visual for players, and makes the pieces look nicer by
-				 * breaking them up.
+				 * Draw the background grid above the pieces (serves as a useful visual for
+				 * players, and makes the pieces look nicer by breaking them up.
 				 */
 				g.setColor(Color.DARK_GRAY);
 				for (int x = 0; x < COL_COUNT; x++) {
@@ -415,6 +413,7 @@ public class BoardPanel extends JPanel {
 		} else if (State == STATE.MENU) {
 			Menu.render(g);
 		}
+
 	}
 
 	/**
@@ -458,17 +457,16 @@ public class BoardPanel extends JPanel {
 		g.fillRect(x, y, TILE_SIZE, TILE_SIZE);
 
 		/*
-		 * Fill the bottom and right edges of the tile with the dark shading
-		 * color.
+		 * Fill the bottom and right edges of the tile with the dark shading color.
 		 */
 		g.setColor(dark);
 		g.fillRect(x, y + TILE_SIZE - SHADE_WIDTH, TILE_SIZE, SHADE_WIDTH);
 		g.fillRect(x + TILE_SIZE - SHADE_WIDTH, y, SHADE_WIDTH, TILE_SIZE);
 
 		/*
-		 * Fill the top and left edges with the light shading. We draw a single
-		 * line for each row or column rather than a rectangle so that we can
-		 * draw a nice looking diagonal where the light and dark shading meet.
+		 * Fill the top and left edges with the light shading. We draw a single line for
+		 * each row or column rather than a rectangle so that we can draw a nice looking
+		 * diagonal where the light and dark shading meet.
 		 */
 		g.setColor(light);
 		for (int i = 0; i < SHADE_WIDTH; i++) {

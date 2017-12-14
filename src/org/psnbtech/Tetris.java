@@ -1,5 +1,6 @@
 package org.psnbtech;
 
+import javax.sound.sampled.*;
 import java.awt.BorderLayout;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
@@ -12,7 +13,6 @@ import org.psnbtech.BoardPanel.STATE;
 
 public class Tetris extends JFrame {
 
-	private static final long serialVersionUID = -4722429764792514382L;
 
 	private static final long FRAME_TIME = 1000L / 50L;
 
@@ -53,7 +53,7 @@ public class Tetris extends JFrame {
 	public static enum STATE {
 		GAME, MENU
 	};
-
+	
 	public static STATE State = STATE.MENU;
 	private Tetris() {
 		/*
@@ -344,6 +344,7 @@ public class Tetris extends JFrame {
 		logicTimer.reset();
 		logicTimer.setCyclesPerSecond(gameSpeed);
 		spawnPiece();
+		
 	}
 
 	private void spawnPiece() {
