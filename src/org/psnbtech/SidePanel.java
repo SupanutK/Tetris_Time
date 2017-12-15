@@ -7,18 +7,8 @@ import java.awt.Graphics;
 
 import javax.swing.JPanel;
 
-/**
- * The {@code SidePanel} class is responsible for displaying various information
- * on the game such as the next piece, the score and current level, and controls.
- * @author Brendan Jones
- *
- */
+
 public class SidePanel extends JPanel {
-	
-	/**
-	 * Serial Version UID.
-	 */
-	private static final long serialVersionUID = 2181495598854992747L;
 
 	/**
 	 * The dimensions of each tile on the next piece preview.
